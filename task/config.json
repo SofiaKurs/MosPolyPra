@@ -1,9 +1,0 @@
-"SERVERS": [
-        {"hostname": " IPadd ", "username": " uz ", "password": " passwd ", "critical_service": "nginx"}
-    ],
-    "CPU_THRESHOLD": 80,
-    "MEMORY_THRESHOLD": 20,
-    "TELEGRAM_TOKEN": " token ",
-    "TELEGRAM_CHAT_ID": " id ",
-    "LOG_FILE": "metrics_log.json"
-}
