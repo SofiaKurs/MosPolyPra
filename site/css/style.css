@@ -1,0 +1,349 @@
+<!-- ========== Единый файл стилей style.css ========== -->
+<style>
+  /* style.css — общие стили для всех страниц */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background: #f5f7fe;
+    color: #152032;
+    line-height: 1.5;
+  }
+
+  .navbar {
+    background: #0c1427;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 10, 30, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .logo span {
+    color: #5f9df3;
+    background: #1f2b44;
+    padding: 0.1rem 0.6rem;
+    border-radius: 30px;
+    margin-left: 6px;
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    color: #cfdbf5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+  }
+
+  .nav-links a:hover, .nav-links a.active {
+    color: white;
+    border-bottom-color: #5f9df3;
+  }
+
+  .container {
+    max-width: 1300px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 2rem 0 2rem 0;
+    color: #0c1427;
+    border-left: 8px solid #5f9df3;
+    padding-left: 1.5rem;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #e2eafc, #ffffff);
+    border-radius: 3rem;
+    padding: 3rem;
+    margin: 1.5rem 0 3rem;
+    box-shadow: 0 20px 30px -10px rgba(28, 52, 84, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    flex: 2 1 400px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    background: linear-gradient(145deg, #0c1427, #2a4b7c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+    color: #1e2b41;
+    max-width: 650px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    flex: 1 1 300px;
+    background: #1f344d;
+    border-radius: 2.5rem;
+    padding: 1.8rem;
+    color: white;
+    text-align: center;
+    box-shadow: inset 0 -5px 0 #5f9df3;
+  }
+
+  .hero-image svg {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    filter: drop-shadow(0 8px 12px #00000030);
+  }
+
+  .badge {
+    background: #5f9df3;
+    color: #0c1427;
+    font-weight: 700;
+    padding: 0.25rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    background: #0c1427;
+    color: white;
+    border: none;
+    padding: 0.9rem 2.4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #0c1427;
+  }
+
+  .btn:hover {
+    background: #2a4b7c;
+    border-color: #5f9df3;
+    transform: scale(1.02);
+  }
+
+  .card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 12px 24px -12px rgba(0, 32, 64, 0.2);
+    transition: 0.2s ease;
+    height: 100%;
+    border: 1px solid #eef3fc;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 30px -12px #1e3f6b40;
+  }
+
+  .card h3 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #0f1e36;
+    margin-bottom: 1.2rem;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .team-grid, .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .team-card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 8px 18px #d2e0fc;
+    border-left: 6px solid #5f9df3;
+  }
+
+  .team-card h4 {
+    font-size: 1.6rem;
+    color: #0c1427;
+  }
+
+  .role {
+    color: #2e4a7a;
+    font-weight: 600;
+    margin: 0.5rem 0 1rem;
+    display: inline-block;
+    background: #e3edfe;
+    padding: 0.3rem 1.2rem;
+    border-radius: 30px;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1.2rem;
+    color: #526e96;
+    margin: 0.8rem 0 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .tag {
+    background: #dde9ff;
+    color: #133155;
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    display: inline-block;
+  }
+
+  .diagram-box {
+    background: #0f1e30;
+    color: white;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    margin: 2rem 0;
+  }
+
+  .resource-list {
+    list-style: none;
+  }
+
+  .resource-list li {
+    margin: 1rem 0;
+    padding: 0.8rem 1.2rem;
+    background: #ecf2fc;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .resource-list a {
+    color: #152032;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+  }
+
+  .resource-list a:hover {
+    border-bottom-color: #5f9df3;
+  }
+
+  .video-placeholder {
+    background: #172b44;
+    border-radius: 2rem;
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    margin: 2rem 0;
+    border: 2px dashed #5f9df3;
+  }
+
+  .partner-highlight {
+    background:#dde5f5; 
+    border-radius: 2rem; 
+    padding: 1.5rem; 
+    margin: 2rem 0; 
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .media-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .media-item {
+    background: #b7cef0;
+    border-radius: 2rem;
+    flex: 1 1 200px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .group-photo {
+    background: #1c314e;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    color: white;
+  }
+
+  .photo-placeholder {
+    background: #2f5688;
+    height: 120px;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .post-media {
+    background:#d2e3ff; 
+    border-radius: 1rem; 
+    padding: 1rem; 
+    margin-top: 1rem;
+  }
+
+  .preview-card {
+    margin-top: 2rem;
+  }
+
+  footer {
+    background: #0c1427;
+    color: #a0b9da;
+    padding: 2.5rem;
+    text-align: center;
+    margin-top: 4rem;
+    border-radius: 3rem 3rem 0 0;
+  }
+</style>
