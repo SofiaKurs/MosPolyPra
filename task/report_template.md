@@ -1,4 +1,4 @@
-# 🤖 Telegram-бот для мониторинга серверов
+# Telegram-бот для мониторинга серверов
 
 ## Краткое техническое руководство
 
@@ -54,15 +54,15 @@ pip install paramiko python-telegram-bot
 {
     "SERVERS": [
         {
-            "hostname": "192.168.1.100",
+            "hostname": "192.168.1.1",
             "username": "admin",
-            "password": "pass",
+            "password": "passwd",
             "critical_service": "nginx"
         }
     ],
     "CPU_THRESHOLD": 80,
     "MEMORY_THRESHOLD": 85,
-    "TELEGRAM_TOKEN": "ваш_токен",
+    "TELEGRAM_TOKEN": "токен",
     "TELEGRAM_CHAT_ID": "id_чата",
     "LOG_FILE": "metrics.log"
 }
