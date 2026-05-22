@@ -21,14 +21,11 @@
 
 **Диаграмма последовательности:**
 ```mermaid
-sequenceDiagram
-    Bot->>Сервер: SSH запрос метрик
-    Сервер-->>Bot: CPU / Memory
-    alt превышение порога
-        Bot->>Telegram: уведомление
-        Bot->>Сервер: restart service
-    end
-    Bot->>Лог: сохранение данных
+graph LR
+    A[Bot] -->|SSH| B[Сервер 1]
+    A -->|SSH| C[Сервер 2]
+    A -->|Telegram API| D[Telegram]
+    A --> E[(Лог-файл)]
 ```
 
 ---
